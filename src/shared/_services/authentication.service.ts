@@ -18,11 +18,12 @@ export class AuthenticationService {
   result: ResultDto = new ResultDto();
 
   login(loginData: LoginRequestModel) {
-    var url = loginUrl;
+    var url = `${environment.apiUrl}${loginUrl}`;
     return this.http.post<any>(url, loginData).pipe(
       map(userLoginResponse => {
         if (userLoginResponse.IsSuccess) {
-          var user = userLoginResponse["Result"]["Data"];
+          debugger;
+          var user = userLoginResponse["Result"]["data"];
 
           const loginUserModel: LoginResponseModel = Object.assign(
             {},
@@ -32,8 +33,8 @@ export class AuthenticationService {
 
           if (
             loginUserModel &&
-            loginUserModel.IsLoginSuccess &&
-            loginUserModel.Token
+            loginUserModel.isLoginSuccess &&
+            loginUserModel.token
           ) {
             // store user details and jwt token in local storage to keep user logged in between page refreshes
             localStorage.setItem("currentUser", JSON.stringify(user));
@@ -74,7 +75,7 @@ export class AuthenticationService {
         JSON.parse(localStorage.getItem("currentUser"))
       );
 
-      if (userInfo.Token) {
+      if (userInfo.token) {
         return true;
       }
       return false;

@@ -5,10 +5,10 @@ export class LoginRequestModel {
 }
 
 export class LoginResponseModel {
-  IsLoginSuccess: boolean;
-  Token: string;
-  Expires: number;
-  UserId: string;
-  FullName: string;
-  Email: string;
+  isLoginSuccess: boolean;
+  token: string;
+  expires: number;
+  userId: string;
+  fullName: string;
+  email: string;
 }

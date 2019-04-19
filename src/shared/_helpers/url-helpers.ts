@@ -1,4 +1,4 @@
-export const loginUrl = `/api/users/authenticate`;
+export const loginUrl = `/api/app/v1/TokenAuth/authenticate`;
 export const currentUserInfoUrl = `/api/users/GetLogedInUser`;
 
 //for setting

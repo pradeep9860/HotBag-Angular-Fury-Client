@@ -75,7 +75,7 @@ export class LoginComponent implements OnInit {
       )
       .subscribe(
         result => {
-          if (result.IsLoginSuccess) {
+          if (result.isLoginSuccess) {
             this.router.navigate([this.returnUrl]);
           } else {
             this.authService.logout();
