@@ -7,7 +7,9 @@ import { LoginResponseModel, LoginRequestModel } from "shared/Models";
 import { loginUrl, currentUserInfoUrl } from "shared/Helpers/url-helpers";
 import { Observable } from "rxjs";
 
-@Injectable()
+@Injectable({
+  providedIn: "root"
+})
 export class AuthenticationService {
   userData: LoginResponseModel = new LoginResponseModel();
   constructor(private http: HttpClient) {}
@@ -18,8 +20,7 @@ export class AuthenticationService {
     return this.http.post<any>(url, loginData).pipe(
       map(userLoginResponse => {
         if (userLoginResponse.IsSuccess) {
-          debugger;
-          var user = userLoginResponse["Result"]["data"];
+          var user = userLoginResponse["result"]["data"];
 
           const loginUserModel: LoginResponseModel = Object.assign(
             {},
