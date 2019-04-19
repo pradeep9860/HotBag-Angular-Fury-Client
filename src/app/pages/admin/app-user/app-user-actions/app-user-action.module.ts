@@ -8,7 +8,7 @@ import { MaterialModule } from "app/shared/material-components.module";
 import { HighlightModule } from "app/shared/highlightjs/highlight.module";
 import { FuryCardModule } from "app/shared/card/card.module";
 import { BreadcrumbsModule } from "app/core/breadcrumbs/breadcrumbs.module";
-import { AppUserService } from "shared/_services/appuser.service";
+import { AppUserService } from "shared/Services/appuser.service";
 
 @NgModule({
   declarations: [AppUserActionComponent],

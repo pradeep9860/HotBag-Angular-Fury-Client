@@ -12,12 +12,12 @@ import {
   PagedListingComponentBase,
   PagedRequestDto
 } from "shared/paged-listing-component-base";
-import { AppUserDto } from "shared/_models/app-user-model";
 import { ListColumn } from "app/shared/list/list-column.model";
-import { AppUserService } from "shared/_services/appuser.service";
 import { Router } from "@angular/router";
 import Swal from "sweetalert2";
-import { AlertService } from "shared/_services";
+import { AppUserDto } from "shared/Models";
+import { AppUserService } from "shared/Services/appuser.service";
+import { AlertService } from "shared/Services";
 
 @Component({
   selector: "fury-app-user",

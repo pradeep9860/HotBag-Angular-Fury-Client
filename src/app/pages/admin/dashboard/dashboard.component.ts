@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
-import { AuthenticationService } from "shared/_services";
-import { LoginResponseModel } from "shared/_models/auth-model";
+import { LoginResponseModel } from "shared/Models";
+import { AuthenticationService } from "shared/Services";
 
 @Component({
   selector: "app-dashboard",

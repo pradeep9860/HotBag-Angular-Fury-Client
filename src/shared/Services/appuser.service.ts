@@ -1,23 +1,23 @@
 ﻿import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { map } from "rxjs/operators";
-import {
-  appUser_GetAllUrl,
-  appUser_GetUrl,
-  appUser_SaveUrl,
-  appUser_UpdateUrl,
-  appUser_DeleteUrl,
-  appUser_GetAllPagedUrl,
-  appUser_ChangePasswordUrl,
-  appUser_ChangeMyPasswordUrl
-} from "shared/_helpers/url-helpers";
-import { AppUserDto } from "shared/_models/app-user-model";
 import { Observable } from "rxjs";
 import {
   ListResultDto,
   PagedResultDto,
   ResultDto
 } from "shared/paged-listing-component-base";
+import { AppUserDto } from "shared/Models";
+import {
+  appUser_GetAllUrl,
+  appUser_GetAllPagedUrl,
+  appUser_GetUrl,
+  appUser_SaveUrl,
+  appUser_UpdateUrl,
+  appUser_DeleteUrl,
+  appUser_ChangePasswordUrl,
+  appUser_ChangeMyPasswordUrl
+} from "shared/Helpers/url-helpers";
 
 @Injectable()
 export class AppUserService {

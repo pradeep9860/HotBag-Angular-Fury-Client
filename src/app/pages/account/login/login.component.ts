@@ -2,11 +2,10 @@ import { ChangeDetectorRef, Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { MatSnackBar } from "@angular/material";
 import { Router, ActivatedRoute } from "@angular/router";
-import { AuthenticationService, AlertService } from "shared/_services";
-import { LoginRequestModel } from "shared/_models/auth-model";
 import { finalize } from "rxjs/operators";
-import { UserInfoService } from "shared/_services/user-info.service";
-import { AppUserDto } from "shared/_models";
+import { LoginRequestModel } from "shared/Models";
+import { AuthenticationService, AlertService } from "shared/Services";
+import { UserInfoService } from "shared/Services/user-info.service";
 
 @Component({
   selector: "fury-login",

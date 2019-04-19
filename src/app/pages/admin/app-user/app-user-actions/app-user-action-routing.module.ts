@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { AppUserActionComponent } from "./app-user-action.component";
-import { AuthGuard } from "shared/_guards";
+import { AuthGuard } from "shared/Guards";
 
 @NgModule({
   imports: [

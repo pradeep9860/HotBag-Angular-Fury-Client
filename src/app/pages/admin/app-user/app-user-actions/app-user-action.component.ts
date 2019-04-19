@@ -5,11 +5,10 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 // import { NgxSpinnerService } from "ngx-spinner";
 import { finalize } from "rxjs/operators";
 import { AppComponentBase } from "shared/app-component-base";
-import { AppUserDto } from "shared/_models/app-user-model";
-import { AppUserService } from "shared/_services/appuser.service";
-import { AlertService, AuthenticationService } from "shared/_services";
-import { UserInfoService } from "shared/_services/user-info.service";
-
+import { AppUserDto } from "shared/Models";
+import { AlertService, AuthenticationService } from "shared/Services";
+import { AppUserService } from "shared/Services/appuser.service";
+import { UserInfoService } from "shared/Services/user-info.service";
 @Component({
   selector: "fury-app-user-actions",
   templateUrl: "./app-user-action.component.html",

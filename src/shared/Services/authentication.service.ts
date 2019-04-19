@@ -1,15 +1,11 @@
 ﻿import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { map } from "rxjs/operators";
-
 import { environment } from "../../environments/environment";
-import {
-  LoginRequestModel,
-  LoginResponseModel
-} from "shared/_models/auth-model";
-import { loginUrl, currentUserInfoUrl } from "shared/_helpers/url-helpers";
-import { Observable } from "rxjs";
 import { ResultDto } from "shared/paged-listing-component-base";
+import { LoginResponseModel, LoginRequestModel } from "shared/Models";
+import { loginUrl, currentUserInfoUrl } from "shared/Helpers/url-helpers";
+import { Observable } from "rxjs";
 
 @Injectable()
 export class AuthenticationService {

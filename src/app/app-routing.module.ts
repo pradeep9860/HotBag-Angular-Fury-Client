@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
 import { LayoutComponent } from "./core/layout/layout.component";
-import { AuthGuard } from "shared/_guards";
+import { AuthGuard } from "shared/Guards";
 
 const routes: Routes = [
   {
@@ -33,12 +33,6 @@ const routes: Routes = [
         path: "app/user-management",
         loadChildren: "app/pages/admin/app-user/app-user.module#AppUserModule"
       },
-      {
-        path: "app/file-management",
-        loadChildren:
-          "app/pages/admin/pdf-handler/pdf-handler.module#PdfHandlerrModule"
-      },
-
       {
         path: "app/profile",
         loadChildren:

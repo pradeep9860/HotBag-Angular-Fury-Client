@@ -1,11 +1,11 @@
 import { Component, OnInit, OnDestroy } from "@angular/core";
-import { AuthenticationService } from "shared/_services";
 import { ActivatedRoute, Router } from "@angular/router";
 import { MatDialog } from "@angular/material";
 import Swal from "sweetalert2";
-import { UserInfoService } from "shared/_services/user-info.service";
-import { AppUserDto } from "shared/_models";
 import { Subscription } from "rxjs";
+import { AppUserDto } from "shared/Models";
+import { UserInfoService } from "shared/Services/user-info.service";
+import { AuthenticationService } from "shared/Services";
 
 @Component({
   selector: "fury-toolbar-user-button",

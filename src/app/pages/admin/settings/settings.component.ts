@@ -1,12 +1,12 @@
 import { Component, Injector, OnInit } from "@angular/core";
 
 import { Router, ActivatedRoute } from "@angular/router";
-import { AlertService } from "shared/_services";
 import { AppComponentBase } from "shared/app-component-base";
-import { FileDirectorySetting } from "shared/_models/file-info-model";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
-import { SettingService } from "shared/_services/setting.service";
 import { finalize } from "rxjs/operators";
+import { FileDirectorySetting } from "shared/Models/file-info-model";
+import { AlertService } from "shared/Services";
+import { SettingService } from "shared/Services/setting.service";
 
 @Component({
   selector: "fury-settings",
@@ -91,7 +91,7 @@ export class SettingsComponent extends AppComponentBase implements OnInit {
         res => {
           if (res) {
             this.alertService.success("Setting successfully updated.");
-               this.getValueForEdit();
+            this.getValueForEdit();
           }
         },
         err => {

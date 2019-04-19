@@ -9,15 +9,10 @@ import { environment } from "../environments/environment";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { CoreModule } from "./core/core.module";
-import { AuthGuard } from "shared/_guards";
-import { AlertService, AuthenticationService } from "shared/_services";
-import {
-  JwtInterceptor,
-  ErrorInterceptor
-  // fakeBackendProvider
-} from "shared/_helpers";
-import { AlertComponent } from "shared/_directives";
-import { UserInfoService } from "shared/_services/user-info.service";
+import { AuthGuard } from "shared/Guards/auth.guard";
+import { AlertService, AuthenticationService } from "shared/Services";
+import { UserInfoService } from "shared/Services/user-info.service";
+import { JwtInterceptor, ErrorInterceptor } from "shared/Helpers";
 
 @NgModule({
   imports: [

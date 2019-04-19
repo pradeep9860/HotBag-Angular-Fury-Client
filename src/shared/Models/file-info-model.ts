@@ -1,5 +1,3 @@
-import { SettingService } from "shared/_services/setting.service";
-
 export class FileInfoDto {
   FileName: string;
   FilePath: string;

@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Subscription } from "rxjs";
-import { AlertService } from "shared/_services";
 import { MatSnackBar } from "@angular/material";
+import { AlertService } from "shared/Services";
 
 @Component({
   selector: "fury-footer",

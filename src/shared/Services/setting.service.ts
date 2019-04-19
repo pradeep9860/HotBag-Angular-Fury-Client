@@ -10,8 +10,8 @@ import {
 import {
   FileInfoDto,
   FileDirectorySetting
-} from "shared/_models/file-info-model";
-import { setting_GetEdit, setting_Update } from "shared/_helpers/url-helpers";
+} from "shared/Models/file-info-model";
+import { setting_GetEdit, setting_Update } from "shared/Helpers/url-helpers";
 
 @Injectable()
 export class SettingService {
